@@ -10,8 +10,7 @@ RUN apk -v --update add \
         less \
         mailcap \
         && \
-    pip install --upgrade awscli python-magic && \
-    apk -v --purge del py3-pip && \
+    pip install --upgrade awscli python-magic --ignore-installed six && \
     rm /var/cache/apk/*
 
 VOLUME /root/.aws
