@@ -40,7 +40,7 @@ RUN sed -i '/botocore/d' requirements.txt \
 RUN unzip dist/awscli-exe.zip \
     && ./aws/install --bin-dir /aws-cli-bin
 
-FROM docker:20.10
+FROM docker:20.10.7-dind
 
 RUN apk -v --update add \
         bash \
