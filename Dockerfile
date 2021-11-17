@@ -50,6 +50,7 @@ RUN apk -v --update add \
         jq \
         less \
         mailcap \
+        wget \
     && rm /var/cache/apk/*
 
 COPY --from=installer /usr/local/aws-cli/ /usr/local/aws-cli/
