@@ -13,4 +13,7 @@ RUN apk -v --update add \
         aws-cli \
     && rm /var/cache/apk/*
 
+RUN git config --global user.email "contact@emphie.com"
+RUN git config --global user.name "Emphie CI Runner"
+
 WORKDIR /project
